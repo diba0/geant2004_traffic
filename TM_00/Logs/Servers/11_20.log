@@ -1,0 +1,40 @@
+-----------------------------------------------------------
+Server listening on 11020 (test #1)
+-----------------------------------------------------------
+Accepted connection from 10.0.0.11, port 58938
+[  6] local 10.0.0.20 port 11020 connected to 10.0.0.11 port 60160
+[ ID] Interval           Transfer     Bitrate         Jitter    Lost/Total Datagrams
+[  6]   0.00-1.00   sec   130 KBytes  1.06 Mbits/sec  5.836 ms  0/92 (0%)  
+[  6]   1.00-2.00   sec   148 KBytes  1.22 Mbits/sec  3.950 ms  28/133 (21%)  
+[  6]   2.00-3.00   sec  84.8 KBytes   695 Kbits/sec  2.265 ms  98/158 (62%)  
+[  6]   3.00-4.00   sec  79.2 KBytes   649 Kbits/sec  3.242 ms  96/152 (63%)  
+[  6]   4.00-5.00   sec  76.4 KBytes   625 Kbits/sec  2.626 ms  87/141 (62%)  
+[  6]   5.00-6.00   sec  83.4 KBytes   684 Kbits/sec  2.107 ms  103/162 (64%)  
+[  6]   6.00-7.00   sec  93.3 KBytes   765 Kbits/sec  2.026 ms  83/149 (56%)  
+[  6]   7.00-8.00   sec  90.5 KBytes   741 Kbits/sec  1.571 ms  87/151 (58%)  
+[  6]   8.00-9.00   sec  82.0 KBytes   672 Kbits/sec  1.519 ms  97/155 (63%)  
+[  6]   9.00-10.00  sec   158 KBytes  1.30 Mbits/sec  86.156 ms  74/186 (40%)  
+[  6]  10.00-11.00  sec   175 KBytes  1.44 Mbits/sec  6.162 ms  0/124 (0%)  
+[  6]  11.00-12.00  sec  94.7 KBytes   776 Kbits/sec  2.825 ms  75/142 (53%)  
+[  6]  12.00-13.00  sec  76.4 KBytes   625 Kbits/sec  1.632 ms  93/147 (63%)  
+[  6]  13.00-14.00  sec  79.2 KBytes   649 Kbits/sec  1.593 ms  97/153 (63%)  
+[  6]  14.00-15.00  sec  77.8 KBytes   637 Kbits/sec  1.734 ms  102/157 (65%)  
+[  6]  15.00-16.00  sec  63.6 KBytes   521 Kbits/sec  2.560 ms  107/152 (70%)  
+[  6]  16.00-17.00  sec  67.9 KBytes   556 Kbits/sec  2.230 ms  103/151 (68%)  
+[  6]  17.00-18.00  sec  70.7 KBytes   579 Kbits/sec  2.124 ms  99/149 (66%)  
+[  6]  18.00-19.00  sec  77.8 KBytes   637 Kbits/sec  1.783 ms  92/147 (63%)  
+[  6]  19.00-20.00  sec  74.9 KBytes   614 Kbits/sec  2.614 ms  106/159 (67%)  
+[  6]  20.00-21.00  sec  84.8 KBytes   695 Kbits/sec  1.767 ms  87/147 (59%)  
+[  6]  21.00-22.00  sec  77.8 KBytes   637 Kbits/sec  1.168 ms  92/147 (63%)  
+[  6]  22.00-23.00  sec   117 KBytes   962 Kbits/sec  5.773 ms  87/170 (51%)  
+[  6]  23.00-24.00  sec   257 KBytes  2.11 Mbits/sec  5.379 ms  0/182 (0%)  
+[  6]  24.00-25.00  sec   216 KBytes  1.77 Mbits/sec  6.818 ms  0/153 (0%)  
+[  6]  25.00-26.00  sec   216 KBytes  1.77 Mbits/sec  6.717 ms  0/153 (0%)  
+[  6]  26.00-27.00  sec   230 KBytes  1.89 Mbits/sec  7.493 ms  0/163 (0%)  
+[  6]  27.00-28.00  sec   222 KBytes  1.82 Mbits/sec  8.205 ms  0/157 (0%)  
+[  6]  28.00-29.00  sec   232 KBytes  1.90 Mbits/sec  0.042 ms  0/164 (0%)  
+[  6]  29.00-30.00  sec   215 KBytes  1.76 Mbits/sec  0.007 ms  0/152 (0%)  
+- - - - - - - - - - - - - - - - - - - - - - - - -
+[ ID] Interval           Transfer     Bitrate         Jitter    Lost/Total Datagrams
+[SUM]  0.0-30.1 sec  46 datagrams received out-of-order
+[  6]   0.00-30.07  sec  3.67 MBytes  1.02 Mbits/sec  0.007 ms  1893/4548 (42%)  receiver

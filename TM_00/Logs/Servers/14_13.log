@@ -1,0 +1,6 @@
+-----------------------------------------------------------
+Server listening on 14013 (test #1)
+-----------------------------------------------------------
+Accepted connection from 10.0.0.14, port 59678
+[  6] local 10.0.0.13 port 14013 connected to 10.0.0.14 port 50235
+iperf3: error - idle timeout for receiving data

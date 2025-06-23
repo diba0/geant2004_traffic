@@ -1,0 +1,3 @@
+Connecting to host 10.0.0.13, port 14013
+[102] local 10.0.0.14 port 50235 connected to 10.0.0.13 port 14013
+iperf3: error - control socket has closed unexpectedly

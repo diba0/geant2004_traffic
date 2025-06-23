@@ -1,0 +1,2 @@
+py [net.get('h%d' % i).cmd('bash /home/ubuntu/Documents/GEANT2004_Traffic/TM_00/Servers/iperf_server_%02d.sh &' % i) for i in range(1,24)]
+py [net.get('h%d' % i).cmd('bash /home/ubuntu/Documents/GEANT2004_Traffic/TM_00/Clients/iperf_client_%02d.sh &' % i) for i in range(1,24)]
