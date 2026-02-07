@@ -18,6 +18,14 @@ TM_16hours = ['00', '01', '03', '05', '07', '08', '09', '10', '11', '12', '13', 
 for i in range(16):
     matrix = parse_traffic_matrix(f'traffic-matrices/{TMfile_names[i]}')
     np.fill_diagonal(matrix, 0) # 将对角线元素置为0
+    # 矩阵元素缩小100倍
+    matrix = matrix / 100.0
+    # # 矩阵最大值, 打印保留3位小数
+    # max_value = np.max(matrix)
+    # print(f'Max value in {TMfile_names[i]} after scaling: {max_value:.3f}')
+    # # 矩阵大于0的最小值，打印保留3位小数
+    # min_value = np.min(matrix[matrix > 0])
+    # print(f'Min value in {TMfile_names[i]}: {min_value:.3f}')
     # 创建TM目录
     TM_hour = 'TM_' + TM_16hours[i]
     if not os.path.exists(TM_hour):
@@ -28,10 +36,8 @@ for i in range(16):
         os.makedirs(TM_hour + '/Clients')
     if not os.path.exists(TM_hour + '/Logs'):
         os.makedirs(TM_hour + '/Logs')
-    if not os.path.exists(TM_hour + '/Logs/Clients'):
-        os.makedirs(TM_hour + '/Logs/Clients')
-    if not os.path.exists(TM_hour + '/Logs/Servers'):
-        os.makedirs(TM_hour + '/Logs/Servers')
+    
+    np.savetxt(f'{TM_hour}/traffic_matrix.csv', matrix, delimiter=',', fmt='%.3f')
 
     # 为每个src创建iperf client
     for src in range(1, 24):
@@ -40,24 +46,24 @@ for i in range(16):
                 f.write(f'#!/bin/bash\n')
                 for dst in range(1, 24):
                     throughput = matrix[src-1][dst-1]
-                    if throughput != 0.0:
+                    if throughput > 0.1:  # 只对大于0.1kbps的流量生成iperf命令
                         if dst < 10:
-                            f.write(f'iperf3 -c 10.0.0.{dst} -p {src}00{dst} -w 256k -t 30 -u -b {throughput:.3f}k --logfile /home/ubuntu/Documents/GEANT2004_Traffic/{TM_hour}/Logs/Clients/{src}_{dst}.log &\n')
+                            f.write(f'iperf3 -c 10.0.0.{dst} -p {src}00{dst} -t 60 -u -b {throughput:.3f}k --logfile /home/ubuntu/Documents/GEANT2004_Traffic/{TM_hour}/Logs/{src}_{dst}.log &\n')
                             f.write(f'sleep 0.4\n')
                         else:
-                            f.write(f'iperf3 -c 10.0.0.{dst} -p {src}0{dst} -w 256k -t 30 -u -b {throughput:.3f}k --logfile /home/ubuntu/Documents/GEANT2004_Traffic/{TM_hour}/Logs/Clients/{src}_{dst}.log &\n')
+                            f.write(f'iperf3 -c 10.0.0.{dst} -p {src}0{dst} -t 60 -u -b {throughput:.3f}k --logfile /home/ubuntu/Documents/GEANT2004_Traffic/{TM_hour}/Logs/{src}_{dst}.log &\n')
                             f.write(f'sleep 0.4\n')
         else:
             with open(f'{TM_hour}/Clients/iperf_client_{src}.sh', 'w') as f:
                 f.write(f'#!/bin/bash\n')
                 for dst in range(1, 24):
                     throughput = matrix[src-1][dst-1]
-                    if throughput != 0.0:
+                    if throughput > 0.1:  # 只对大于0.1kbps的流量生成iperf命令
                         if dst < 10:
-                            f.write(f'iperf3 -c 10.0.0.{dst} -p {src}00{dst} -w 256k -t 30 -u -b {throughput:.3f}k --logfile /home/ubuntu/Documents/GEANT2004_Traffic/{TM_hour}/Logs/Clients/{src}_{dst}.log &\n')
+                            f.write(f'iperf3 -c 10.0.0.{dst} -p {src}00{dst} -t 60 -u -b {throughput:.3f}k --logfile /home/ubuntu/Documents/GEANT2004_Traffic/{TM_hour}/Logs/{src}_{dst}.log &\n')
                             f.write(f'sleep 0.4\n')
                         else:
-                            f.write(f'iperf3 -c 10.0.0.{dst} -p {src}0{dst} -w 256k -t 30 -u -b {throughput:.3f}k --logfile /home/ubuntu/Documents/GEANT2004_Traffic/{TM_hour}/Logs/Clients/{src}_{dst}.log &\n')
+                            f.write(f'iperf3 -c 10.0.0.{dst} -p {src}0{dst} -t 60 -u -b {throughput:.3f}k --logfile /home/ubuntu/Documents/GEANT2004_Traffic/{TM_hour}/Logs/{src}_{dst}.log &\n')
                             f.write(f'sleep 0.4\n')
     
     # 为每个dst创建iperf server
@@ -67,24 +73,24 @@ for i in range(16):
                 f.write(f'#!/bin/bash\n')
                 for src in range(1, 24):
                     throughput = matrix[src-1][dst-1]
-                    if throughput != 0.0:
+                    if throughput > 0.1:  # 只对大于0.1kbps的流量生成iperf命令
                         if dst < 10:
-                            f.write(f'iperf3 -s -p {src}00{dst} -1 -D --logfile /home/ubuntu/Documents/GEANT2004_Traffic/{TM_hour}/Logs/Servers/{src}_{dst}.log\n')
+                            f.write(f'iperf3 -s -p {src}00{dst} -1 -D\n')
                             f.write(f'sleep 0.3\n')
                         else:
-                            f.write(f'iperf3 -s -p {src}0{dst} -1 -D --logfile /home/ubuntu/Documents/GEANT2004_Traffic/{TM_hour}/Logs/Servers/{src}_{dst}.log\n')
+                            f.write(f'iperf3 -s -p {src}0{dst} -1 -D\n')
                             f.write(f'sleep 0.3\n')
         else:
             with open(f'{TM_hour}/Servers/iperf_server_{dst}.sh', 'w') as f:
                 f.write(f'#!/bin/bash\n')
                 for src in range(1, 24):
                     throughput = matrix[src-1][dst-1]
-                    if throughput != 0.0:
+                    if throughput > 0.1:  # 只对大于0.1kbps的流量生成iperf命令
                         if dst < 10:
-                            f.write(f'iperf3 -s -p {src}00{dst} -1 -D --logfile /home/ubuntu/Documents/GEANT2004_Traffic/{TM_hour}/Logs/Servers/{src}_{dst}.log\n')
+                            f.write(f'iperf3 -s -p {src}00{dst} -1 -D\n')
                             f.write(f'sleep 0.3\n')
                         else:
-                            f.write(f'iperf3 -s -p {src}0{dst} -1 -D --logfile /home/ubuntu/Documents/GEANT2004_Traffic/{TM_hour}/Logs/Servers/{src}_{dst}.log\n')
+                            f.write(f'iperf3 -s -p {src}0{dst} -1 -D\n')
                             f.write(f'sleep 0.3\n')
 
 

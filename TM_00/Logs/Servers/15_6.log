@@ -1,6 +1,0 @@
------------------------------------------------------------
-Server listening on 15006 (test #1)
------------------------------------------------------------
-Accepted connection from 10.0.0.15, port 57480
-[  6] local 10.0.0.6 port 15006 connected to 10.0.0.15 port 34186
-iperf3: error - idle timeout for receiving data

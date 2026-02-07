@@ -1,6 +1,0 @@
------------------------------------------------------------
-Server listening on 8002 (test #1)
------------------------------------------------------------
-Accepted connection from 10.0.0.8, port 50934
-[  6] local 10.0.0.2 port 8002 connected to 10.0.0.8 port 57831
-iperf3: error - idle timeout for receiving data

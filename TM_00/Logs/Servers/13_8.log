@@ -1,6 +1,0 @@
------------------------------------------------------------
-Server listening on 13008 (test #1)
------------------------------------------------------------
-Accepted connection from 10.0.0.13, port 56578
-[  6] local 10.0.0.8 port 13008 connected to 10.0.0.13 port 44999
-iperf3: error - idle timeout for receiving data

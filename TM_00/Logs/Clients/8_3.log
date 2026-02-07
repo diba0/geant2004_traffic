@@ -1,7 +1,0 @@
-Connecting to host 10.0.0.3, port 8003
-[102] local 10.0.0.8 port 33913 connected to 10.0.0.3 port 8003
-[ ID] Interval           Transfer     Bitrate         Total Datagrams
-[102]   0.00-1.00   sec  2.83 KBytes  23.1 Kbits/sec  2  
-[ ID] Interval           Transfer     Bitrate         Total Datagrams
-[102]   0.00-1.00   sec  2.83 KBytes  23.1 Kbits/sec  2  
-iperf3: error - control socket has closed unexpectedly

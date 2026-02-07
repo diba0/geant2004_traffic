@@ -1,29 +1,15 @@
 #!/bin/bash
-iperf3 -s -p 1006 -1 -D --logfile /home/ubuntu/Documents/GEANT2004_Traffic/TM_03/Logs/Servers/1_6.log
+iperf3 -s -p 1006 -1 -D
 sleep 0.3
-iperf3 -s -p 2006 -1 -D --logfile /home/ubuntu/Documents/GEANT2004_Traffic/TM_03/Logs/Servers/2_6.log
+iperf3 -s -p 2006 -1 -D
 sleep 0.3
-iperf3 -s -p 5006 -1 -D --logfile /home/ubuntu/Documents/GEANT2004_Traffic/TM_03/Logs/Servers/5_6.log
+iperf3 -s -p 11006 -1 -D
 sleep 0.3
-iperf3 -s -p 7006 -1 -D --logfile /home/ubuntu/Documents/GEANT2004_Traffic/TM_03/Logs/Servers/7_6.log
+iperf3 -s -p 13006 -1 -D
 sleep 0.3
-iperf3 -s -p 10006 -1 -D --logfile /home/ubuntu/Documents/GEANT2004_Traffic/TM_03/Logs/Servers/10_6.log
+iperf3 -s -p 16006 -1 -D
 sleep 0.3
-iperf3 -s -p 11006 -1 -D --logfile /home/ubuntu/Documents/GEANT2004_Traffic/TM_03/Logs/Servers/11_6.log
+iperf3 -s -p 17006 -1 -D
 sleep 0.3
-iperf3 -s -p 12006 -1 -D --logfile /home/ubuntu/Documents/GEANT2004_Traffic/TM_03/Logs/Servers/12_6.log
-sleep 0.3
-iperf3 -s -p 13006 -1 -D --logfile /home/ubuntu/Documents/GEANT2004_Traffic/TM_03/Logs/Servers/13_6.log
-sleep 0.3
-iperf3 -s -p 16006 -1 -D --logfile /home/ubuntu/Documents/GEANT2004_Traffic/TM_03/Logs/Servers/16_6.log
-sleep 0.3
-iperf3 -s -p 17006 -1 -D --logfile /home/ubuntu/Documents/GEANT2004_Traffic/TM_03/Logs/Servers/17_6.log
-sleep 0.3
-iperf3 -s -p 19006 -1 -D --logfile /home/ubuntu/Documents/GEANT2004_Traffic/TM_03/Logs/Servers/19_6.log
-sleep 0.3
-iperf3 -s -p 21006 -1 -D --logfile /home/ubuntu/Documents/GEANT2004_Traffic/TM_03/Logs/Servers/21_6.log
-sleep 0.3
-iperf3 -s -p 22006 -1 -D --logfile /home/ubuntu/Documents/GEANT2004_Traffic/TM_03/Logs/Servers/22_6.log
-sleep 0.3
-iperf3 -s -p 23006 -1 -D --logfile /home/ubuntu/Documents/GEANT2004_Traffic/TM_03/Logs/Servers/23_6.log
+iperf3 -s -p 19006 -1 -D
 sleep 0.3

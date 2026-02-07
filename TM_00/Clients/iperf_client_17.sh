@@ -1,43 +1,43 @@
 #!/bin/bash
-iperf3 -c 10.0.0.1 -p 17001 -w 256k -t 30 -u -b 3565.164k --logfile /home/ubuntu/Documents/GEANT2004_Traffic/TM_00/Logs/Clients/17_1.log &
+iperf3 -c 10.0.0.1 -p 17001 -t 60 -u -b 35.652k --logfile /home/ubuntu/Documents/GEANT2004_Traffic/TM_00/Logs/17_1.log &
 sleep 0.4
-iperf3 -c 10.0.0.2 -p 17002 -w 256k -t 30 -u -b 9396.062k --logfile /home/ubuntu/Documents/GEANT2004_Traffic/TM_00/Logs/Clients/17_2.log &
+iperf3 -c 10.0.0.2 -p 17002 -t 60 -u -b 93.961k --logfile /home/ubuntu/Documents/GEANT2004_Traffic/TM_00/Logs/17_2.log &
 sleep 0.4
-iperf3 -c 10.0.0.3 -p 17003 -w 256k -t 30 -u -b 14736.827k --logfile /home/ubuntu/Documents/GEANT2004_Traffic/TM_00/Logs/Clients/17_3.log &
+iperf3 -c 10.0.0.3 -p 17003 -t 60 -u -b 147.368k --logfile /home/ubuntu/Documents/GEANT2004_Traffic/TM_00/Logs/17_3.log &
 sleep 0.4
-iperf3 -c 10.0.0.4 -p 17004 -w 256k -t 30 -u -b 130477.236k --logfile /home/ubuntu/Documents/GEANT2004_Traffic/TM_00/Logs/Clients/17_4.log &
+iperf3 -c 10.0.0.4 -p 17004 -t 60 -u -b 1304.772k --logfile /home/ubuntu/Documents/GEANT2004_Traffic/TM_00/Logs/17_4.log &
 sleep 0.4
-iperf3 -c 10.0.0.5 -p 17005 -w 256k -t 30 -u -b 153365.831k --logfile /home/ubuntu/Documents/GEANT2004_Traffic/TM_00/Logs/Clients/17_5.log &
+iperf3 -c 10.0.0.5 -p 17005 -t 60 -u -b 1533.658k --logfile /home/ubuntu/Documents/GEANT2004_Traffic/TM_00/Logs/17_5.log &
 sleep 0.4
-iperf3 -c 10.0.0.6 -p 17006 -w 256k -t 30 -u -b 45.227k --logfile /home/ubuntu/Documents/GEANT2004_Traffic/TM_00/Logs/Clients/17_6.log &
+iperf3 -c 10.0.0.6 -p 17006 -t 60 -u -b 0.452k --logfile /home/ubuntu/Documents/GEANT2004_Traffic/TM_00/Logs/17_6.log &
 sleep 0.4
-iperf3 -c 10.0.0.7 -p 17007 -w 256k -t 30 -u -b 1851.369k --logfile /home/ubuntu/Documents/GEANT2004_Traffic/TM_00/Logs/Clients/17_7.log &
+iperf3 -c 10.0.0.7 -p 17007 -t 60 -u -b 18.514k --logfile /home/ubuntu/Documents/GEANT2004_Traffic/TM_00/Logs/17_7.log &
 sleep 0.4
-iperf3 -c 10.0.0.8 -p 17008 -w 256k -t 30 -u -b 93676.604k --logfile /home/ubuntu/Documents/GEANT2004_Traffic/TM_00/Logs/Clients/17_8.log &
+iperf3 -c 10.0.0.8 -p 17008 -t 60 -u -b 936.766k --logfile /home/ubuntu/Documents/GEANT2004_Traffic/TM_00/Logs/17_8.log &
 sleep 0.4
-iperf3 -c 10.0.0.9 -p 17009 -w 256k -t 30 -u -b 119404.400k --logfile /home/ubuntu/Documents/GEANT2004_Traffic/TM_00/Logs/Clients/17_9.log &
+iperf3 -c 10.0.0.9 -p 17009 -t 60 -u -b 1194.044k --logfile /home/ubuntu/Documents/GEANT2004_Traffic/TM_00/Logs/17_9.log &
 sleep 0.4
-iperf3 -c 10.0.0.11 -p 17011 -w 256k -t 30 -u -b 86047.591k --logfile /home/ubuntu/Documents/GEANT2004_Traffic/TM_00/Logs/Clients/17_11.log &
+iperf3 -c 10.0.0.11 -p 17011 -t 60 -u -b 860.476k --logfile /home/ubuntu/Documents/GEANT2004_Traffic/TM_00/Logs/17_11.log &
 sleep 0.4
-iperf3 -c 10.0.0.12 -p 17012 -w 256k -t 30 -u -b 5326.187k --logfile /home/ubuntu/Documents/GEANT2004_Traffic/TM_00/Logs/Clients/17_12.log &
+iperf3 -c 10.0.0.12 -p 17012 -t 60 -u -b 53.262k --logfile /home/ubuntu/Documents/GEANT2004_Traffic/TM_00/Logs/17_12.log &
 sleep 0.4
-iperf3 -c 10.0.0.13 -p 17013 -w 256k -t 30 -u -b 21751.298k --logfile /home/ubuntu/Documents/GEANT2004_Traffic/TM_00/Logs/Clients/17_13.log &
+iperf3 -c 10.0.0.13 -p 17013 -t 60 -u -b 217.513k --logfile /home/ubuntu/Documents/GEANT2004_Traffic/TM_00/Logs/17_13.log &
 sleep 0.4
-iperf3 -c 10.0.0.14 -p 17014 -w 256k -t 30 -u -b 10927.591k --logfile /home/ubuntu/Documents/GEANT2004_Traffic/TM_00/Logs/Clients/17_14.log &
+iperf3 -c 10.0.0.14 -p 17014 -t 60 -u -b 109.276k --logfile /home/ubuntu/Documents/GEANT2004_Traffic/TM_00/Logs/17_14.log &
 sleep 0.4
-iperf3 -c 10.0.0.15 -p 17015 -w 256k -t 30 -u -b 35.387k --logfile /home/ubuntu/Documents/GEANT2004_Traffic/TM_00/Logs/Clients/17_15.log &
+iperf3 -c 10.0.0.15 -p 17015 -t 60 -u -b 0.354k --logfile /home/ubuntu/Documents/GEANT2004_Traffic/TM_00/Logs/17_15.log &
 sleep 0.4
-iperf3 -c 10.0.0.16 -p 17016 -w 256k -t 30 -u -b 3734.018k --logfile /home/ubuntu/Documents/GEANT2004_Traffic/TM_00/Logs/Clients/17_16.log &
+iperf3 -c 10.0.0.16 -p 17016 -t 60 -u -b 37.340k --logfile /home/ubuntu/Documents/GEANT2004_Traffic/TM_00/Logs/17_16.log &
 sleep 0.4
-iperf3 -c 10.0.0.18 -p 17018 -w 256k -t 30 -u -b 565.093k --logfile /home/ubuntu/Documents/GEANT2004_Traffic/TM_00/Logs/Clients/17_18.log &
+iperf3 -c 10.0.0.18 -p 17018 -t 60 -u -b 5.651k --logfile /home/ubuntu/Documents/GEANT2004_Traffic/TM_00/Logs/17_18.log &
 sleep 0.4
-iperf3 -c 10.0.0.19 -p 17019 -w 256k -t 30 -u -b 241.582k --logfile /home/ubuntu/Documents/GEANT2004_Traffic/TM_00/Logs/Clients/17_19.log &
+iperf3 -c 10.0.0.19 -p 17019 -t 60 -u -b 2.416k --logfile /home/ubuntu/Documents/GEANT2004_Traffic/TM_00/Logs/17_19.log &
 sleep 0.4
-iperf3 -c 10.0.0.20 -p 17020 -w 256k -t 30 -u -b 181.324k --logfile /home/ubuntu/Documents/GEANT2004_Traffic/TM_00/Logs/Clients/17_20.log &
+iperf3 -c 10.0.0.20 -p 17020 -t 60 -u -b 1.813k --logfile /home/ubuntu/Documents/GEANT2004_Traffic/TM_00/Logs/17_20.log &
 sleep 0.4
-iperf3 -c 10.0.0.21 -p 17021 -w 256k -t 30 -u -b 5561.858k --logfile /home/ubuntu/Documents/GEANT2004_Traffic/TM_00/Logs/Clients/17_21.log &
+iperf3 -c 10.0.0.21 -p 17021 -t 60 -u -b 55.619k --logfile /home/ubuntu/Documents/GEANT2004_Traffic/TM_00/Logs/17_21.log &
 sleep 0.4
-iperf3 -c 10.0.0.22 -p 17022 -w 256k -t 30 -u -b 13015.849k --logfile /home/ubuntu/Documents/GEANT2004_Traffic/TM_00/Logs/Clients/17_22.log &
+iperf3 -c 10.0.0.22 -p 17022 -t 60 -u -b 130.158k --logfile /home/ubuntu/Documents/GEANT2004_Traffic/TM_00/Logs/17_22.log &
 sleep 0.4
-iperf3 -c 10.0.0.23 -p 17023 -w 256k -t 30 -u -b 109.502k --logfile /home/ubuntu/Documents/GEANT2004_Traffic/TM_00/Logs/Clients/17_23.log &
+iperf3 -c 10.0.0.23 -p 17023 -t 60 -u -b 1.095k --logfile /home/ubuntu/Documents/GEANT2004_Traffic/TM_00/Logs/17_23.log &
 sleep 0.4

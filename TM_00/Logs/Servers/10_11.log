@@ -1,6 +1,0 @@
------------------------------------------------------------
-Server listening on 10011 (test #1)
------------------------------------------------------------
-Accepted connection from 10.0.0.10, port 57624
-[  6] local 10.0.0.11 port 10011 connected to 10.0.0.10 port 34213
-iperf3: error - idle timeout for receiving data

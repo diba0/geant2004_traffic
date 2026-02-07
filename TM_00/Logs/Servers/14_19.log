@@ -1,6 +1,0 @@
------------------------------------------------------------
-Server listening on 14019 (test #1)
------------------------------------------------------------
-Accepted connection from 10.0.0.14, port 49058
-[  6] local 10.0.0.19 port 14019 connected to 10.0.0.14 port 37171
-iperf3: error - idle timeout for receiving data

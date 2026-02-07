@@ -1,6 +1,0 @@
-Connecting to host 10.0.0.19, port 14019
-[102] local 10.0.0.14 port 37171 connected to 10.0.0.19 port 14019
-[ ID] Interval           Transfer     Bitrate         Total Datagrams
-[102]   0.00-17.07  sec  0.00 Bytes  0.00 bits/sec  0  
-[102]  17.07-17.07  sec  1.41 KBytes   579 Mbits/sec  2  
-iperf3: error - control socket has closed unexpectedly
